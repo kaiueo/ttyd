@@ -309,6 +309,7 @@ int main(int argc, char **argv) {
 
   int start = calc_command_start(argc, argv);
   server = server_new(argc, argv, start);
+  server->writable = true;
 
   struct lws_context_creation_info info;
   memset(&info, 0, sizeof(info));
